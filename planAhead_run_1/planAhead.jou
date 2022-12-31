@@ -1,0 +1,96 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun Jan 26 02:35:08 2020
+# Process ID: 8208
+# Log file: D:/fpga/adc128s102/planAhead_run_1/planAhead.log
+# Journal file: D:/fpga/adc128s102/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/fpga/adc128s102/pa.fromNetlist.tcl
+startgroup
+set_property package_pin P32 [get_ports {en[0]}]
+endgroup
+startgroup
+set_property package_pin P41 [get_ports {en[1]}]
+endgroup
+startgroup
+set_property package_pin P45 [get_ports {en[2]}]
+endgroup
+startgroup
+set_property package_pin P46 [get_ports {en[3]}]
+endgroup
+startgroup
+set_property package_pin P47 [get_ports {s[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {s[1]}]]
+set_property package_pin "" [get_ports [list  {s[0]}]]
+startgroup
+set_property package_pin P47 [get_ports {svn[0]}]
+endgroup
+startgroup
+set_property package_pin P43 [get_ports {svn[1]}]
+endgroup
+startgroup
+set_property package_pin P34 [get_ports {svn[2]}]
+endgroup
+startgroup
+set_property package_pin P40 [get_ports {svn[3]}]
+endgroup
+startgroup
+set_property package_pin P35 [get_ports {svn[4]}]
+endgroup
+startgroup
+set_property package_pin P44 [get_ports {svn[5]}]
+endgroup
+startgroup
+set_property package_pin P30 [get_ports {svn[6]}]
+endgroup
+startgroup
+set_property package_pin P50 [get_ports clk_24M]
+endgroup
+set_property package_pin "" [get_ports [list  i_single_data]]
+set_property package_pin "" [get_ports [list  cs]]
+startgroup
+set_property package_pin P51 [get_ports {s[7]}]
+endgroup
+startgroup
+set_property package_pin P48 [get_ports {s[6]}]
+endgroup
+startgroup
+set_property package_pin P55 [get_ports {s[5]}]
+endgroup
+startgroup
+set_property package_pin P56 [get_ports {s[4]}]
+endgroup
+startgroup
+set_property package_pin P57 [get_ports {s[3]}]
+endgroup
+startgroup
+set_property package_pin P58 [get_ports {s[2]}]
+endgroup
+startgroup
+set_property package_pin P66 [get_ports {s[1]}]
+endgroup
+startgroup
+set_property package_pin P59 [get_ports {s[0]}]
+endgroup
+startgroup
+set_property package_pin P115 [get_ports cs]
+endgroup
+startgroup
+set_property package_pin P112 [get_ports i_single_data]
+endgroup
+startgroup
+set_property package_pin P111 [get_ports o_single_data]
+endgroup
+startgroup
+set_property package_pin P78 [get_ports pb]
+endgroup
+startgroup
+set_property package_pin P114 [get_ports sck]
+endgroup
+startgroup
+set_property package_pin P115 [get_ports cs]
+endgroup
+save_constraints

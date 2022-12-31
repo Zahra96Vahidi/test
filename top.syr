@@ -1,0 +1,638 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\fpga\adc128s102\ipcore_dir\dcm_clk.v" into library work
+Parsing module <dcm_clk>.
+Analyzing Verilog file "D:\fpga\adc128s102\svn_sgmnt.v" into library work
+Parsing module <svn_sgmnt>.
+Analyzing Verilog file "D:\fpga\adc128s102\debouncer_pb.v" into library work
+Parsing module <debouncer_module>.
+Analyzing Verilog file "D:\fpga\adc128s102\adc.v" into library work
+Parsing module <ADC128S102>.
+Analyzing Verilog file "D:\fpga\adc128s102\TOP.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <ADC128S102>.
+
+Elaborating module <svn_sgmnt>.
+
+Elaborating module <dcm_clk>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=20,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=120,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=30,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DIVIDE=15,CLKOUT2_PHASE=0.0,CLKOUT2_DUTY_CYCLE=0.5,CLKIN_PERIOD=41.666,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "D:\fpga\adc128s102\ipcore_dir\dcm_clk.v" Line 124: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\fpga\adc128s102\ipcore_dir\dcm_clk.v" Line 125: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\fpga\adc128s102\ipcore_dir\dcm_clk.v" Line 126: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\fpga\adc128s102\ipcore_dir\dcm_clk.v" Line 127: Assignment to locked_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:1127 - "D:\fpga\adc128s102\TOP.v" Line 15: Assignment to no_use ignored, since the identifier is never used
+
+Elaborating module <debouncer_module>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "D:\fpga\adc128s102\TOP.v".
+INFO:Xst:3210 - "D:\fpga\adc128s102\TOP.v" line 15: Output port <no_use> of the instance <third> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <top> synthesized.
+
+Synthesizing Unit <ADC128S102>.
+    Related source file is "D:\fpga\adc128s102\adc.v".
+    Found 16-bit register for signal <conversion_data>.
+    Found 4-bit register for signal <counter>.
+    Found 16-bit register for signal <data>.
+    Found 1-bit register for signal <Z_2_o_clk_32M_DFF_22_q>.
+    Found 1-bit register for signal <set_rst_flag_clk_32M_DFF_23>.
+    Found 1-bit register for signal <cs>.
+    Found 4-bit subtractor for signal <PWR_2_o_counter[3]_sub_8_OUT> created at line 79.
+    Found 4-bit adder for signal <counter[3]_GND_2_o_add_10_OUT> created at line 83.
+    Found 1-bit 3-to-1 multiplexer for signal <_n0101> created at line 100.
+    Found 1-bit tristate buffer for signal <o_single_data> created at line 49
+    Found 1-bit tristate buffer for signal <address<2>> created at line 131
+    Found 1-bit tristate buffer for signal <address<1>> created at line 131
+    Found 1-bit tristate buffer for signal <address<0>> created at line 131
+    Found 4-bit comparator lessequal for signal <counter[3]_PWR_2_o_LessThan_10_o> created at line 81
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  39 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  20 Multiplexer(s).
+	inferred   4 Tristate(s).
+Unit <ADC128S102> synthesized.
+
+Synthesizing Unit <svn_sgmnt>.
+    Related source file is "D:\fpga\adc128s102\svn_sgmnt.v".
+    Found 2-bit register for signal <count2>.
+    Found 16-bit register for signal <count>.
+    Found 16-bit adder for signal <count[15]_GND_8_o_add_2_OUT> created at line 21.
+    Found 2-bit adder for signal <count2[1]_GND_8_o_add_4_OUT> created at line 31.
+    Found 16x7-bit Read Only RAM for signal <svn>
+    Found 8-bit 4-to-1 multiplexer for signal <n0018> created at line 44.
+    Found 16-bit comparator greater for signal <count[15]_PWR_6_o_LessThan_2_o> created at line 19
+    Found 2-bit comparator lessequal for signal <count2[1]_PWR_6_o_LessThan_4_o> created at line 29
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <svn_sgmnt> synthesized.
+
+Synthesizing Unit <dcm_clk>.
+    Related source file is "D:\fpga\adc128s102\ipcore_dir\dcm_clk.v".
+    Summary:
+	no macro.
+Unit <dcm_clk> synthesized.
+
+Synthesizing Unit <debouncer_module>.
+    Related source file is "D:\fpga\adc128s102\debouncer_pb.v".
+    Found 1-bit register for signal <set_rst_flag>.
+    Found 1-bit register for signal <set_flag>.
+    Found 1-bit register for signal <rst_flag>.
+    Found 18-bit register for signal <counter>.
+    Found 18-bit adder for signal <counter[17]_GND_13_o_add_10_OUT> created at line 48.
+    Found 18-bit comparator greater for signal <counter[17]_PWR_11_o_LessThan_10_o> created at line 46
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <debouncer_module> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x7-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 1
+ 18-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+# Registers                                            : 12
+ 1-bit register                                        : 6
+ 16-bit register                                       : 3
+ 18-bit register                                       : 1
+ 2-bit register                                        : 1
+ 4-bit register                                        : 1
+# Comparators                                          : 4
+ 16-bit comparator greater                             : 1
+ 18-bit comparator greater                             : 1
+ 2-bit comparator lessequal                            : 1
+ 4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 22
+ 1-bit 2-to-1 multiplexer                              : 19
+ 1-bit 3-to-1 multiplexer                              : 1
+ 18-bit 2-to-1 multiplexer                             : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Tristates                                            : 4
+ 1-bit tristate buffer                                 : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <ADC128S102>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <ADC128S102> synthesized (advanced).
+
+Synthesizing (advanced) Unit <debouncer_module>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <debouncer_module> synthesized (advanced).
+
+Synthesizing (advanced) Unit <svn_sgmnt>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <count2>: 1 register on signal <count2>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_svn> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0018<3:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <svn>           |          |
+    -----------------------------------------------------------------------
+Unit <svn_sgmnt> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x7-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 1
+ 4-bit subtractor                                      : 1
+# Counters                                             : 4
+ 16-bit up counter                                     : 1
+ 18-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 38
+ Flip-Flops                                            : 38
+# Comparators                                          : 4
+ 16-bit comparator greater                             : 1
+ 18-bit comparator greater                             : 1
+ 2-bit comparator lessequal                            : 1
+ 4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 20
+ 1-bit 2-to-1 multiplexer                              : 18
+ 1-bit 3-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:1901 - Instance third/pll_base_inst in unit third/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+WARNING:Xst:2042 - Unit top: 4 internal tristates are replaced by logic (pull-up yes): N4, first/address<0>, first/address<1>, first/address<2>.
+
+Optimizing unit <top> ...
+
+Optimizing unit <debouncer_module> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 78
+ Flip-Flops                                            : 78
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 173
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 15
+#      LUT2                        : 11
+#      LUT3                        : 8
+#      LUT4                        : 10
+#      LUT5                        : 8
+#      LUT6                        : 48
+#      MUXCY                       : 32
+#      VCC                         : 1
+#      XORCY                       : 34
+# FlipFlops/Latches                : 78
+#      FD                          : 4
+#      FD_1                        : 3
+#      FDR                         : 15
+#      FDRE                        : 22
+#      FDRE_1                      : 32
+#      FDS                         : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 25
+#      IBUF                        : 10
+#      IBUFG                       : 1
+#      OBUF                        : 13
+#      OBUFT                       : 1
+# Others                           : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              78  out of  11440     0%  
+ Number of Slice LUTs:                  105  out of   5720     1%  
+    Number used as Logic:               105  out of   5720     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    113
+   Number with an unused Flip Flop:      35  out of    113    30%  
+   Number with an unused LUT:             8  out of    113     7%  
+   Number of fully used LUT-FF pairs:    70  out of    113    61%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    102    24%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+third/pll_base_inst/CLKOUT1        | NONE(second/count_1)   | 39    |
+third/pll_base_inst/CLKOUT2        | NONE(first/counter_0)  | 39    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.900ns (Maximum Frequency: 204.071MHz)
+   Minimum input arrival time before clock: 6.861ns
+   Maximum output required time after clock: 7.275ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'third/pll_base_inst/CLKOUT1'
+  Clock period: 4.900ns (frequency: 204.071MHz)
+  Total number of paths / destination ports: 2414 / 72
+-------------------------------------------------------------------------
+Delay:               4.900ns (Levels of Logic = 20)
+  Source:            fourth/counter_8 (FF)
+  Destination:       fourth/counter_17 (FF)
+  Source Clock:      third/pll_base_inst/CLKOUT1 rising
+  Destination Clock: third/pll_base_inst/CLKOUT1 rising
+
+  Data Path: fourth/counter_8 to fourth/counter_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.525   1.181  fourth/counter_8 (fourth/counter_8)
+     LUT6:I0->O           20   0.254   1.286  fourth/counter[17]_PWR_11_o_LessThan_10_o_inv_inv11 (fourth/counter[17]_PWR_11_o_LessThan_10_o_inv_inv1)
+     LUT5:I4->O            2   0.254   0.725  fourth/counter[17]_PWR_11_o_LessThan_10_o_inv_inv12 (fourth/counter[17]_PWR_11_o_LessThan_10_o_inv_inv)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<0> (fourth/Mcount_counter_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<1> (fourth/Mcount_counter_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<2> (fourth/Mcount_counter_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<3> (fourth/Mcount_counter_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<4> (fourth/Mcount_counter_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<5> (fourth/Mcount_counter_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<6> (fourth/Mcount_counter_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<7> (fourth/Mcount_counter_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<8> (fourth/Mcount_counter_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<9> (fourth/Mcount_counter_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<10> (fourth/Mcount_counter_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<11> (fourth/Mcount_counter_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<12> (fourth/Mcount_counter_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<13> (fourth/Mcount_counter_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<14> (fourth/Mcount_counter_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  fourth/Mcount_counter_cy<15> (fourth/Mcount_counter_cy<15>)
+     MUXCY:CI->O           0   0.023   0.000  fourth/Mcount_counter_cy<16> (fourth/Mcount_counter_cy<16>)
+     XORCY:CI->O           1   0.206   0.000  fourth/Mcount_counter_xor<17> (fourth/Mcount_counter17)
+     FDRE:D                    0.074          fourth/counter_17
+    ----------------------------------------
+    Total                      4.900ns (1.708ns logic, 3.192ns route)
+                                       (34.9% logic, 65.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'third/pll_base_inst/CLKOUT2'
+  Clock period: 3.887ns (frequency: 257.268MHz)
+  Total number of paths / destination ports: 179 / 79
+-------------------------------------------------------------------------
+Delay:               3.887ns (Levels of Logic = 2)
+  Source:            first/cs (FF)
+  Destination:       first/counter_0 (FF)
+  Source Clock:      third/pll_base_inst/CLKOUT2 falling
+  Destination Clock: third/pll_base_inst/CLKOUT2 falling
+
+  Data Path: first/cs to first/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             7   0.525   0.910  first/cs (first/cs)
+     LUT2:I1->O            1   0.254   0.682  first/Mcount_counter_val_SW0 (N5)
+     LUT6:I5->O            4   0.254   0.803  first/Mcount_counter_val (first/Mcount_counter_val)
+     FDRE:R                    0.459          first/counter_0
+    ----------------------------------------
+    Total                      3.887ns (1.492ns logic, 2.395ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'third/pll_base_inst/CLKOUT2'
+  Total number of paths / destination ports: 50 / 17
+-------------------------------------------------------------------------
+Offset:              6.861ns (Levels of Logic = 5)
+  Source:            s<4> (PAD)
+  Destination:       first/o_single_data (FF)
+  Destination Clock: third/pll_base_inst/CLKOUT2 falling
+
+  Data Path: s<4> to first/o_single_data
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.328   1.259  s_4_IBUF (s_4_IBUF)
+     LUT6:I0->O            2   0.254   1.181  first/Mmux_o_single_data_Z_2_o_MUX_51_o14 (first/Mmux_o_single_data_Z_2_o_MUX_51_o13)
+     LUT6:I0->O            1   0.254   0.910  first/Mmux_o_single_data_Z_2_o_MUX_51_o15_SW0 (N13)
+     LUT6:I3->O            1   0.235   1.112  first/Mmux_o_single_data_Z_2_o_MUX_51_o17 (first/Mmux_o_single_data_Z_2_o_MUX_51_o16)
+     LUT6:I1->O            1   0.254   0.000  first/Mmux_o_single_data_Z_2_o_MUX_51_o19 (first/o_single_data_Z_2_o_MUX_51_o)
+     FD_1:D                    0.074          first/o_single_data
+    ----------------------------------------
+    Total                      6.861ns (2.399ns logic, 4.462ns route)
+                                       (35.0% logic, 65.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'third/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 24 / 23
+-------------------------------------------------------------------------
+Offset:              5.347ns (Levels of Logic = 4)
+  Source:            pb (PAD)
+  Destination:       fourth/set_rst_flag (FF)
+  Destination Clock: third/pll_base_inst/CLKOUT1 rising
+
+  Data Path: pb to fourth/set_rst_flag
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            23   1.328   1.586  pb_IBUF (pb_IBUF)
+     LUT3:I0->O            2   0.235   0.834  fourth/counter[17]_PWR_11_o_LessThan_10_o_inv_inv12_SW0 (N7)
+     LUT6:I4->O            1   0.250   0.790  fourth/_n00491 (fourth/_n0049)
+     LUT5:I3->O            1   0.250   0.000  fourth/set_rst_flag_rstpot (fourth/set_rst_flag_rstpot)
+     FD:D                      0.074          fourth/set_rst_flag
+    ----------------------------------------
+    Total                      5.347ns (2.137ns logic, 3.210ns route)
+                                       (40.0% logic, 60.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'third/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 65 / 12
+-------------------------------------------------------------------------
+Offset:              7.275ns (Levels of Logic = 3)
+  Source:            second/count2_0 (FF)
+  Destination:       svn<6> (PAD)
+  Source Clock:      third/pll_base_inst/CLKOUT1 rising
+
+  Data Path: second/count2_0 to svn<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              10   0.525   1.463  second/count2_0 (second/count2_0)
+     LUT6:I0->O            7   0.254   1.186  second/Mmux_n001851 (second/n0018<0>)
+     LUT4:I0->O            1   0.254   0.681  second/Mram_svn41 (svn_4_OBUF)
+     OBUF:I->O                 2.912          svn_4_OBUF (svn<4>)
+    ----------------------------------------
+    Total                      7.275ns (3.945ns logic, 3.330ns route)
+                                       (54.2% logic, 45.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'third/pll_base_inst/CLKOUT2'
+  Total number of paths / destination ports: 116 / 10
+-------------------------------------------------------------------------
+Offset:              6.770ns (Levels of Logic = 3)
+  Source:            first/data_5 (FF)
+  Destination:       svn<6> (PAD)
+  Source Clock:      third/pll_base_inst/CLKOUT2 falling
+
+  Data Path: first/data_5 to svn<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE_1:C->Q           1   0.525   0.958  first/data_5 (first/data_5)
+     LUT6:I2->O            7   0.254   1.186  second/Mmux_n001861 (second/n0018<1>)
+     LUT4:I0->O            1   0.254   0.681  second/Mram_svn61 (svn_6_OBUF)
+     OBUF:I->O                 2.912          svn_6_OBUF (svn<6>)
+    ----------------------------------------
+    Total                      6.770ns (3.945ns logic, 2.825ns route)
+                                       (58.3% logic, 41.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock third/pll_base_inst/CLKOUT1
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+third/pll_base_inst/CLKOUT1|    4.900|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock third/pll_base_inst/CLKOUT2
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+third/pll_base_inst/CLKOUT1|         |         |    3.898|         |
+third/pll_base_inst/CLKOUT2|         |         |    3.887|         |
+---------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.33 secs
+ 
+--> 
+
+Total memory usage is 4493984 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

@@ -1,0 +1,5 @@
+verilog work "ipcore_dir/dcm_clk.v"
+verilog work "svn_sgmnt.v"
+verilog work "debouncer_pb.v"
+verilog work "adc.v"
+verilog work "TOP.v"
