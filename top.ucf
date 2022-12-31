@@ -1,0 +1,28 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "en[0]" LOC = P32;
+NET "en[1]" LOC = P41;
+NET "en[2]" LOC = P45;
+NET "en[3]" LOC = P46;
+NET "svn[0]" LOC = P47;
+NET "svn[1]" LOC = P43;
+NET "svn[2]" LOC = P34;
+NET "svn[3]" LOC = P40;
+NET "svn[4]" LOC = P35;
+NET "svn[5]" LOC = P44;
+NET "svn[6]" LOC = P30;
+NET "clk_24M" LOC = P50;
+NET "s[7]" LOC = P51;
+NET "s[6]" LOC = P48;
+NET "s[5]" LOC = P55;
+NET "s[4]" LOC = P56;
+NET "s[3]" LOC = P57;
+NET "s[2]" LOC = P58;
+NET "s[1]" LOC = P66;
+NET "s[0]" LOC = P59;
+NET "i_single_data" LOC = P112;
+NET "o_single_data" LOC = P111;
+NET "pb" LOC = P78;
+NET "sck" LOC = P114;
+NET "cs" LOC = P115;
